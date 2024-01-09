@@ -754,3 +754,17 @@ function fnc__specialcol_(values, context) {
 function fnc_project_color(values, context) {
     return false;
 };
+
+
+
+function exp_label_sabousiteiti_11_eval_expression(context) {
+    // "自然公_2" || "地種区_2"
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['自然公_2']  + feature.properties['地種区_2'] );
+    } else {
+        return (feature['自然公_2']  + feature['地種区_2'] );
+    }
+}
